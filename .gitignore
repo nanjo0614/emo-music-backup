@@ -1,13 +1,11 @@
-# ===== Python =====
+# ===== Python cache =====
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.pkl
-*.pickle
 *.ipynb_checkpoints/
 
-# ===== Virtual env =====
+# ===== Virtual environments =====
 venv/
 ENV/
 *.env
@@ -25,42 +23,43 @@ Thumbs.db
 .vscode/
 .idea/
 
-# ===== Model checkpoints, weights =====
-**/ckpt/
-**/checkpoints/
-**/best_weight/
-**/output/
-**/runs/
+# ===== Data-heavy directories (not push) =====
+midi_data/
+POP909/
+EMOPIA/
+data/
+dataset/
+data_splits/
 
-# ===== Large intermediate data =====
+# ===== Intermediate / Generated =====
 generation/
 outputs/
 temp/
 tmp/
 
-# ===== EMO-Disentanger / EMO_Harmonizer internal repos =====
-# → これらは独立したGit管理があったので、外側のrepoには含めない
-EMO-Disentanger/
-EMO_Harmonizer/
+# ===== Checkpoints / Weight files =====
+**/ckpt/
+**/checkpoints/
+**/best_weight/
+**/output/
+**/runs/
+**/*.pt
+**/*.bin
+**/*.npy
 
-# ===== Dataset folders =====
-midi_data/
-events/
-emopia_events/
-POP909/
-EMOPIA/
-dataset/
-data/
-data_splits/
-
-# ===== Binary or big files =====
+# ===== Large music data =====
 *.mid
 *.wav
 *.mp3
-*.npy
-*.pt
-*.bin
-*.jsonl
 
 # ===== Streamlit cache =====
 .streamlit/
+
+# ===== Allow project code (force include) =====
+!EMO-Disentanger/**
+!EMO_Harmonizer/**
+!stage2_accompaniment/**
+!stage1_compose/**
+!*.py
+!*.yaml
+!*.txt
