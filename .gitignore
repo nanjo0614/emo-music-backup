@@ -1,0 +1,66 @@
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+*.ipynb_checkpoints/
+
+# ===== Virtual env =====
+venv/
+ENV/
+*.env
+*.venv
+*.egg-info/
+
+# ===== OS junk =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs =====
+*.log
+
+# ===== Editor =====
+.vscode/
+.idea/
+
+# ===== Model checkpoints, weights =====
+**/ckpt/
+**/checkpoints/
+**/best_weight/
+**/output/
+**/runs/
+
+# ===== Large intermediate data =====
+generation/
+outputs/
+temp/
+tmp/
+
+# ===== EMO-Disentanger / EMO_Harmonizer internal repos =====
+# → これらは独立したGit管理があったので、外側のrepoには含めない
+EMO-Disentanger/
+EMO_Harmonizer/
+
+# ===== Dataset folders =====
+midi_data/
+events/
+emopia_events/
+POP909/
+EMOPIA/
+dataset/
+data/
+data_splits/
+
+# ===== Binary or big files =====
+*.mid
+*.wav
+*.mp3
+*.npy
+*.pt
+*.bin
+*.jsonl
+
+# ===== Streamlit cache =====
+.streamlit/
